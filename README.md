@@ -1,2 +1,2 @@
-# CoodingWithLife
+# CodingWithLife
 Phycology App
