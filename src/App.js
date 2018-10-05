@@ -5,7 +5,7 @@ import Register from './components/Register/Register';
 import Survey from './components/tutorial/tutorial.js';
 import Contact from './components/SummitTutorial/SummitTutorial.js'
 import Home from './components/Home/Home.js'
-import Foro from './components/Foro/Foro.js'
+import Chat from './components/Chat/Chat.js'
 import Footer from './components/Footer/Footer.js'
 import './App.css';
 
@@ -56,7 +56,7 @@ class App extends Component {
     if (route === 'signout') {
       this.setState({isSignedIn: false})
       //there are two states on the sign out
-    } else if (route === 'home' || route === 'Survey' || route === 'foro' || route === 'pedidos' ||  route === 'ChangitoAI') {
+    } else if (route === 'home' || route === 'Survey' || route === 'Chat' || route === 'pedidos' ||  route === 'ChangitoAI') {
       this.setState({isSignedIn: true})
     }
     this.setState({route: route});
@@ -73,9 +73,9 @@ class App extends Component {
                 <Contact />
                 </div>
 
-                  :(route === 'foro'
+                  :(route === 'Chat'
                     ? <div>
-                      <Foro />
+                      <Chat />
                       <Footer />
                       </div>
 
