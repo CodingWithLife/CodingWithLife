@@ -56,7 +56,7 @@ class App extends Component {
     if (route === 'signout') {
       this.setState({isSignedIn: false})
       //there are two states on the sign out
-    } else if (route === 'home' || route === 'tutorial' || route === 'foro' || route === 'pedidos' ||  route === 'ChangitoAI') {
+    } else if (route === 'home' || route === 'Survey' || route === 'foro' || route === 'pedidos' ||  route === 'ChangitoAI') {
       this.setState({isSignedIn: true})
     }
     this.setState({route: route});
@@ -79,6 +79,12 @@ class App extends Component {
                       <Footer />
                       </div>
 
+                      :(route === 'Survey'
+                      ? <div>
+                          <Survey />
+                          <Footer />
+                        </div>
+
                       :(route === 'home'
                       ? <div>
                           <Home />
@@ -90,6 +96,7 @@ class App extends Component {
                            : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
                           )
                         )
+                      )
                     )
          }
       </div>
