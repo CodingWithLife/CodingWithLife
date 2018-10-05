@@ -31,12 +31,12 @@ const Footer = () => {
                 </div>
                 <div>
                     <i class="fa fa-envelope"></i>
-                    <p><a href="mailto:support@company.com">support@monkey.com</a></p>
+                    <p><a href="mailto:support@company.com">ohhYeahMR.Pancho</a></p>
                 </div>
             </div>
             <div class="footer-right">
                 <p class="footer-company-about">
-                    <span>CODEMONKEY TEAM</span>
+                    <span>codingWithLife</span>
                     Proud Hola code students
                 </p>
                 <div class="footer-icons">
