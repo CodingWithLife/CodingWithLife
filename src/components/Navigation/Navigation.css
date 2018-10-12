@@ -1,0 +1,37 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #6E0DD0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #E6FB04;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: black;
+}
+
+li a:hover:not(.active) {
+    background-color: #FF0099;
+}
+
+.active {
+    background-color: black;
+}
+
+.toRight{
+  float: right;
+}
+
+.toRightOut{
+  float: right;
+  color: #E6FB04;
+}
