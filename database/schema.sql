@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS chat;
+rDROP DATABASE IF EXISTS chat;
 
 CREATE DATABASE chat;
 
@@ -10,7 +10,7 @@ CREATE TABLE chatRoom (
 
 );
 
-
+INSERT INTO chatRoom (Messages) VALUES ("HEYOO");
 INSERT INTO chatRoom (Messages) VALUES ("hello");
 INSERT INTO chatRoom (Messages) VALUES ("how are you");
 INSERT INTO chatRoom (Messages) VALUES ("where are you");
