@@ -1,19 +1,18 @@
 import React from 'react';
 import './Home.css'
 import jungs from './jungs.jpg'
-import Footer from '../Footer/Footer.js'
 
 
 
 const Home = () => {
 return (
-  <div class="page">
-    <div class="body">
+  <div className="page">
+    <div className="body">
       <div id="featured">
          <center><h3>Stranger Friend</h3></center>
 
 
-          <div id="list-8" class="mk-list-styles  mk-align-none   clear" data-charcode="mk-icon-angle-right" data-family="">
+          <div id="list-8" className="mk-list-styles  mk-align-none   clear" data-charcode="mk-icon-angle-right" data-family="">
 
               <ul>
                 <li>

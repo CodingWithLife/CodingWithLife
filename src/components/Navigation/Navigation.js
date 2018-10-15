@@ -9,11 +9,10 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
         <nav>
           <ul>
             <li><a onClick={() => onRouteChange('home')}>Home</a></li>
-            <li><a onClick={() => onRouteChange('Survey')}>Survey</a></li>
             <li><a onClick={() => onRouteChange('Chat')}>Chat</a></li>
             <li><a onClick={() => onRouteChange('Profiles')}>Profiles</a></li>
-            <div class="toRight">
-              <li ><a class="active"  onClick={() => onRouteChange('signout')}>Sign Out</a></li>
+            <div className="toRight">
+              <li ><a className="active"  onClick={() => onRouteChange('signout')}>Sign Out</a></li>
             </div>
           </ul>
         </nav>
@@ -22,7 +21,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
       return (
         <nav >
           <ul>
-            <div class="toRight">
+            <div className="toRight">
               <li onClick={() => onRouteChange('signin')} className='f3 link dim white underline pa3 pointer'>Sign In</li>
               <li onClick={() => onRouteChange('register')} className='f3 link dim white underline pa3 pointer'>Register</li>
             </div>
