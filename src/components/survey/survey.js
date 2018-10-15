@@ -224,8 +224,8 @@ const Survey = () => {
               <label class="radio-label">Strongly Disagree</label>
            </div>
          </form>
-         </li>
-         <li>
+        </li>
+        <li>
          <h3>14. I like to be alone with my thoughts at times.</h3>
          <form>
            <div class="radios">
@@ -241,8 +241,8 @@ const Survey = () => {
               <label class="radio-label">Strongly Disagree</label>
            </div>
          </form>
-         </li>
-         <li>
+        </li>
+        <li>
          <h3>15. I'm often the last to decide when ordering at a restaurant.</h3>
          <form>
            <div class="radios">
@@ -258,8 +258,8 @@ const Survey = () => {
               <label class="radio-label">Strongly Disagree</label>
            </div>
          </form>
-         </li>
-         <li>
+        </li>
+        <li>
          <h3>16.I make time to listen to other people's problems.</h3>
          <form>
            <div class="radios">
@@ -275,8 +275,8 @@ const Survey = () => {
               <label class="radio-label">Strongly Disagree</label>
            </div>
          </form>
-         </li>
-         <li>
+        </li>
+        <li>
          <h3>17.In games, winning is my main objective.</h3>
          <form>
            <div class="radios">
@@ -292,8 +292,8 @@ const Survey = () => {
               <label class="radio-label">Strongly Disagree</label>
            </div>
          </form>
-         </li>
-         <li>
+        </li>
+        <li>
          <h3>18. People rely on me to fix problems.</h3>
          <form>
            <div class="radios">
