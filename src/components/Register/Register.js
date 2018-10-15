@@ -1,4 +1,6 @@
 import React from 'react';
+import Survey from '../survey/survey.js';
+
 
 class Register extends React.Component {
   constructor(props) {
@@ -88,6 +90,7 @@ class Register extends React.Component {
               />
             </div>
           </div>
+          <Survey />
         </main>
       </article>
     );

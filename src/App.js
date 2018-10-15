@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
-import Survey from './components/survey/survey.js';
 import Profiles from './components/Profiles/Profiles.js'
 import Home from './components/Home/Home.js'
 import Chat from './components/Chat/Chat.js'
@@ -80,11 +79,6 @@ class App extends Component {
                       <Footer />
                       </div>
 
-                      :(route === 'Survey'
-                      ? <div>
-                          <Survey />
-                          <Footer />
-                        </div>
 
                       :(route === 'home'
                       ? <div>
@@ -94,7 +88,6 @@ class App extends Component {
                            route === 'signin'
                            ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
                            : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
-                          )
                         )
                       )
                     )
