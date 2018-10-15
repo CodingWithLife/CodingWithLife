@@ -23,19 +23,18 @@ const Contact = () => {
   return (
 
   <div>
-  <Card id={outlaw} />
-  <Card id={jester} />
-  <Card id={lover} />
-  <Card id={caregiver} />
-  <Card id={everyman} />
-  <Card id={innocent} />
-  <Card id={ruler} />
-  <Card id={sage} />
-  <Card id={magician} />
-  <Card id={hero} />
-  <Card id={creator} />
-  <Card id={explorer} />
-
+    <Card id={outlaw} />
+    <Card id={jester} />
+    <Card id={lover} />
+    <Card id={caregiver} />
+    <Card id={everyman} />
+    <Card id={innocent} />
+    <Card id={ruler} />
+    <Card id={sage} />
+    <Card id={magician} />
+    <Card id={hero} />
+    <Card id={creator} />
+    <Card id={explorer} />
 	</div>
 
   );
