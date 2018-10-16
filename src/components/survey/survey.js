@@ -617,12 +617,20 @@ const Survey = () => {
          </form>
         </li>
       </ol>
-    <div>
-          <button type="submit" class="btn">Submit Answers</button>
-          </div>
-          <div>
-          <button class="w3-button w3-light-grey w3-hover-black w3-round w3-display-middle">Button</button>
-          </div>
+
+        <div>
+          <button class="w3-button w3-light-grey w3-hover-black w3-round w3-display-middle">Submit Answers</button>
+        </div>
+
+        <div className="">
+          <input
+            onClick={this.onSubmitSignIn}
+            className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+            type="submit"
+            value="Register"
+          />
+        </div>
+
    </div>
  );
 }
