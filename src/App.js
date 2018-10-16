@@ -76,13 +76,13 @@ class App extends Component {
                   :(route === 'Chat'
                     ? <div>
                       <Chat />
-                      <Footer />
                       </div>
 
 
                       :(route === 'home'
                       ? <div>
                           <Home />
+                          <Footer />
                         </div>
                         : (
                            route === 'signin'
