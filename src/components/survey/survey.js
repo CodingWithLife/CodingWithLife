@@ -5,7 +5,11 @@ const Survey = () => {
    <div>
      <ol>
         <li>
+<<<<<<< HEAD
           <h3>I try to see myself in other peoples shoes.</h3>
+=======
+          <h3>1. I try to see myself in other peoples shoes.</h3>
+>>>>>>> master
           <form>
             <div class="radios">
                <input className="ph1" class="radio-input" type="radio" name="test"/>
@@ -158,7 +162,11 @@ const Survey = () => {
          </form>
         </li>
         <li>
+<<<<<<< HEAD
          <h3>I dont like to burden people with my problems.</h3>
+=======
+         <h3>10. I dont like to burden people with my problems.</h3>
+>>>>>>> master
          <form>
            <div class="radios">
               <input className="ph1" class="radio-input" type="radio" name="test"/>
@@ -243,7 +251,11 @@ const Survey = () => {
          </form>
         </li>
         <li>
+<<<<<<< HEAD
          <h3>Im often the last to decide when ordering at a restaurant.</h3>
+=======
+         <h3>15. Im often the last to decide when ordering at a restaurant.</h3>
+>>>>>>> master
          <form>
            <div class="radios">
               <input className="ph1" class="radio-input" type="radio" name="test"/>
@@ -260,7 +272,11 @@ const Survey = () => {
          </form>
         </li>
         <li>
+<<<<<<< HEAD
          <h3>I make time to listen to other peoples problems.</h3>
+=======
+         <h3>16.I make time to listen to other peoples problems.</h3>
+>>>>>>> master
          <form>
            <div class="radios">
               <input className="ph1" class="radio-input" type="radio" name="test"/>
@@ -328,7 +344,11 @@ const Survey = () => {
          </form>
         </li>
         <li>
+<<<<<<< HEAD
          <h3>I dont like to be outdone.</h3>
+=======
+         <h3>20.I dont like to be outdone.</h3>
+>>>>>>> master
          <form>
            <div class="radios">
               <input className="ph1" class="radio-input" type="radio" name="test"/>
@@ -362,7 +382,11 @@ const Survey = () => {
          </form>
         </li>
         <li>
+<<<<<<< HEAD
          <h3>I set personal goals, such as New Years resolutions.</h3>
+=======
+         <h3>22. I set personal goals, such as New Years resolutions.</h3>
+>>>>>>> master
          <form>
            <div class="radios">
               <input className="ph1" class="radio-input" type="radio" name="test"/>
@@ -430,7 +454,11 @@ const Survey = () => {
          </form>
         </li>
         <li>
+<<<<<<< HEAD
          <h3>Theres nothing wrong with telling white lies.</h3>
+=======
+         <h3>26. Theres nothing wrong with telling white lies.</h3>
+>>>>>>> master
          <form>
            <div class="radios">
               <input className="ph1" class="radio-input" type="radio" name="test"/>
@@ -498,7 +526,11 @@ const Survey = () => {
          </form>
         </li>
         <li>
+<<<<<<< HEAD
          <h3>You mustnt take life too seriously.</h3>
+=======
+         <h3>30.You mustnt take life too seriously.</h3>
+>>>>>>> master
          <form>
            <div class="radios">
               <input className="ph1" class="radio-input" type="radio" name="test"/>
