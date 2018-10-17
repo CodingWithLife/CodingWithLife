@@ -6,28 +6,22 @@ var mysql = require('mysql');
   database : 'chat'
 });
 
-connection.connect(function(err) {
- if (!err) {
-   console.log("Database is is connected...nn");
- } else {
-   console.log("Error connecting database....nn");
- }
-});
+var selectUser = function(callback) {
+  connection.query('SELECT * FROM User', function(err, results, fields) {
+    if(err) {
+      callback(err, null);
+    } else {
+      callback(null, results);
+    }
+  });
+};
 
-
-
-
-const chatRoom = function(amount_mesuare, carbs, carbs_time, callback) {
- connection.query(
-   "INSERT INTO carbs (amount_mesuare, carbs, carbs_time) VALUES (?, ?, ?)",
-   [amount_mesuare, carbs, carbs_time],
-   (err, results) => {
-     if (err) {
-       callback(err, null);
-     } else {
-       console.log(results);
-       callback(null, results);
-     }
-   }
- );
+var selectMessage = function(callback) {
+  connection.query('SELECT * FROM chatRoom', function(err, results, fields) {
+    if(err) {
+      callback(err, null);
+    } else {
+      callback(null, results);
+    }
+  });
 };
