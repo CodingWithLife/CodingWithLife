@@ -5,6 +5,7 @@ import Register from './components/Register/Register';
 import Profiles from './components/Profiles/Profiles.js'
 import Home from './components/Home/Home.js'
 import Chat from './components/Chat/Chat.js'
+import Survey from './components/survey/survey.js'
 import Footer from './components/Footer/Footer.js'
 import './App.css';
 
@@ -52,10 +53,10 @@ class App extends Component {
 
 
   onRouteChange = (route) => {
-    if (route === 'signout') {
+    if (route === 'signout' || route === 'Survey') {
       this.setState({isSignedIn: false})
       //there are two states on the sign out
-    } else if (route === 'home' || route === 'Survey' || route === 'Chat' || route === 'Profiles') {
+    } else if (route === 'home' || route === 'Chat' || route === 'Profiles') {
       this.setState({isSignedIn: true})
     }
     this.setState({route: route});
@@ -67,7 +68,8 @@ class App extends Component {
       <div className="App">
 
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
-        { route === 'Profiles'
+        {
+            route === 'Profiles'
               ? <div>
                 <Profiles />
                 <Footer />
@@ -84,10 +86,16 @@ class App extends Component {
                           <Home />
                           <Footer />
                         </div>
-                        : (
-                           route === 'signin'
+
+                        : (route === 'signin'
                            ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
-                           : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+
+                           :(route === 'Survey'
+                             ?<Survey />
+                              :(
+                                <Register onRouteChange={this.onRouteChange}/>
+                              )
+                          )
                         )
                       )
                     )
