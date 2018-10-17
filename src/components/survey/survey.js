@@ -630,8 +630,7 @@ const Survey = () => {
             value="Register"
           />
         </div>
-
-   </div>
+      </div>
  );
 }
 
