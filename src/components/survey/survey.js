@@ -6,7 +6,6 @@ const Survey = () => {
      <ol>
         <li>
           <h3>I try to see myself in other peoples shoes.</h3>
-
           <form>
             <div class="radios">
                <input className="ph1" class="radio-input" type="radio" name="test"/>
@@ -329,7 +328,6 @@ const Survey = () => {
          </form>
         </li>
         <li>
-
          <h3>I dont like to be outdone.</h3>
          <form>
            <div class="radios">
