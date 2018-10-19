@@ -60,16 +60,21 @@ class Signin extends React.Component {
                 />
               </div>
             </fieldset>
-            <div className="">
+            <div>
               <button
                 onClick={this.onSubmitSignIn}
-                className="signIn2"
+                className="singin"
                 type="submit"
                 value="Sign in"
-            >sign in</button>
+            >Sing In</button>
             </div>
-            <div className="lh-copy mt3">
-              <p  onClick={() => onRouteChange('register')} className="f6 link dim black db pointer">Register</p>
+            <div>
+              <button
+                onClick={this.onSubmitSignIn}
+                className="register"
+                type="submit"
+                value="Sign in"
+            >Register</button>
             </div>
           </div>
         </main>
