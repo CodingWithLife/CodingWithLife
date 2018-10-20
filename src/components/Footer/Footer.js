@@ -1,13 +1,12 @@
 
 import React from 'react';
-import './Footer.css'
 
 const Footer = () => {
       return (
         <div>
         <footer class="footer-distributed">
             <div class="footer-left">
-                <h3>HOLA<span>CODE</span></h3>
+                <h2>HOLACODE</h2>
                 <p class="footer-links">
                     <a href="Home">Home</a>
                     ·
@@ -17,7 +16,7 @@ const Footer = () => {
                     ·
                     <a href="Profiles">Profiles</a>
                 </p>
-                <p class="footer-company-name">Thesis Project &copy; 2018</p>
+                <p class="companyname">Thesis Project &copy; 2018</p>
             </div>
             <div class="footer-center">
                 <div>
