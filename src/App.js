@@ -89,7 +89,7 @@ class App extends Component {
                            :(route === 'Survey'
                              ?<Survey />
                               :(
-                                <Register onRouteChange={this.onRouteChange}/>
+                                <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
                               )
                           )
                         )

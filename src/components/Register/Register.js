@@ -1,6 +1,4 @@
 import React from 'react';
-/*import Survey from '../survey/survey.js';*/
-
 
 class Register extends React.Component {
   constructor(props) {
@@ -24,39 +22,52 @@ class Register extends React.Component {
     this.setState({password: event.target.value})
   }
 
-
+  onSubmitSignIn = () => {
+    fetch('http://localhost:1337/register', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password,
+        name: this.state.name
+      })
+    })
+      .then(response => response.json())
+      .then(user => {
+        if (user){
+          this.props.onRouteChange('home')
+        }
+      })
+  }
 
   render() {
     return (
-      <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-35-l mw6 shadow-5 center">
-        <main className="pa4 black-80">
-          <div className="measure">
-            <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-              <legend className="f1 fw6 ph0 mh0">Register</legend>
-              <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
+      <article >
+        <main >
+          <div >
+            <fieldset id="sign_up">
+              <legend >Register</legend>
+              <div >
+                <label  htmlFor="name">Name</label>
                 <input
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="text"
                   name="name"
                   id="name"
                   onChange={this.onNameChange}
                 />
               </div>
-              <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
+              <div >
+                <label htmlFor="email-address">Email</label>
                 <input
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="email"
                   name="email-address"
                   id="email-address"
                   onChange={this.onEmailChange}
                 />
               </div>
-              <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
+              <div >
+                <label  htmlFor="password">Password</label>
                 <input
-                  className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="password"
                   name="password"
                   id="password"
@@ -64,9 +75,14 @@ class Register extends React.Component {
                 />
               </div>
             </fieldset>
+            <div className="">
+              <input
+                onClick={this.onSubmitSignIn}
+                type="submit"
+                value="Register"
+              />
+            </div>
           </div>
-
-          <button ><a onClick={() => this.props.onRouteChange('Survey')}>Next</a></button>
         </main>
       </article>
     );
