@@ -34,9 +34,17 @@ app.post('/signin', (req, res) => {
   }
 })
 
-app.get('/survey',(req,res) => {
- res.send('hello')
+app.post('/signin', (req, res) => {
+  var a = JSON.parse(req.body);
+  if (a.body.email === database.users[0].email &&
+    a.body.password === database.users[0].password) {
+    res.json('signed in');
+    // console.log('signed in')
+  } else {
+    res.status(400).json('access denied');
+  }
 })
+
 
 app.listen(3000, () => {
   console.log('Hey im running');

@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS strangerFriend ;
+DROP DATABASE IF EXISTS chat;
 
 CREATE DATABASE strangerFriend;
 
