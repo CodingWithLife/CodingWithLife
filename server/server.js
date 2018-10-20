@@ -1,53 +1,60 @@
 const express = require('express');
+//You need  body parser to be able to get the req.body
+const bodyParser = require('body-parser')
+
 const app = express();
-const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt-nodejs');
-const cors = require('cors');
 
-const database = {
-  users: [{
-    id: '1',
-    name: 'pete',
-    email: 'pete@gmail.com',
-    password: 'pete',
-    joined: new Date()
-  }]
-}
+app.use(bodyParser.urlencoded({extended: false}))
+//also need to parse json if you are using it
 app.use(bodyParser.json());
-app.use(cors());
 
-app.get('/', (req, res) => res.send('Hello World!'))
-
-
-app.get('/', (req, res) => {
-  res.send(dtabase.users);
+app.use((req, res, next) => {
+  console.log('I am middleware');
+  next();
 })
+// app.use(express.static(__dirname + '/change'))
 
-app.post('/signin', (req, res) => {
-  var a = JSON.parse(req.body);
-  if (a.body.email === database.users[0].email &&
-    a.body.password === database.users[0].password) {
-    res.json('signed in');
-    // console.log('signed in')
-  } else {
-    res.status(400).json('access denied');
+// app.get('/',(req, res) =>{
+//   console.log(req.query);
+//   //req.bodyParser
+//   //req.header
+//   //req.params
+// })
+
+app.get('/',(req, res) => {
+  const user = {
+    name:'Pancho',
+    hobby: 'Gamming'
   }
+  res.send(user)
 })
+//Aside from get funcs there are  post , delete
 
-app.post('/signin', (req, res) => {
-  var a = JSON.parse(req.body);
-  if (a.body.email === database.users[0].email &&
-    a.body.password === database.users[0].password) {
-    res.json('signed in');
-    // console.log('signed in')
-  } else {
-    res.status(400).json('access denied');
+
+app.get('/brother',(req, res) => {
+  const user = {
+    name:'Juan',
+    hobby: 'Don'
   }
+  res.send(user)
+})
+
+app.get('/sister',(req, res) => {
+  const user = {
+    name:'Rosy',
+    hobby: 'cut hair'
+  }
+  res.send(user)
+})
+
+app.post('/post',(req, res) => {
+  const user = {
+    name:'posterBoy',
+    hobby: 'guess'
+  }
+  res.send(user)
+  console.log(req.body)
 })
 
 
-app.listen(3000, () => {
-  console.log('Hey im running');
-})
-
-//postgresql DATA base is not connecting to this server need to fix it
+app.listen(3000);
