@@ -1,43 +1,4 @@
-.radio-label {
-   display: inline-block;
-    vertical-align: top;
-    margin-right: 3%;
-    display: inline-block;
-    margin: auto;
-    text-align: left;
-}
-.radio-input {
-     margin-top: -1px;
-    vertical-align: middle;
-    display: inline-block;
-    margin: auto;
-    text-align: left;
-}
-.radios{
-  display: inline-block;
-  margin: auto;
-  text-align: left;
 
-}
-fieldset {
-    text-align: center;
-    margin-top: -1px;
-   vertical-align: middle;
-   display: inline-block;
-   margin: auto;
-   text-align: left;
-}
-div {
-    margin: auto;
-    border: 1px solid black;
-    display: inline-block;
-    margin: auto;
-    text-align: left;
-}
-
-
-.w3-round, .w3-round-medium {
-    border-radius: 5px;
-    background-color: black;
-
+ul.a {
+    list-style-position: outside;
 }

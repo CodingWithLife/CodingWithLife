@@ -1,6 +1,4 @@
 import React from 'react';
-import './Navigation.css'
-
 
 const Navigation = ({ onRouteChange, isSignedIn }) => {
     if (isSignedIn) {
@@ -10,8 +8,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
           <ul>
             <li><a onClick={() => onRouteChange('home')}>Home</a></li>
             <li><a onClick={() => onRouteChange('Chat')}>Chat</a></li>
-            <li><a onClick={() => onRouteChange('Survey')}>survey</a></li>
-            <li><a onClick={() => onRouteChange('Profiles')}>Profiles</a></li>
+            <li><a onClick={() => onRouteChange('About')}>About</a></li>
             <div className="toRight">
               <li ><a className="active"  onClick={() => onRouteChange('signout')}>Sign Out</a></li>
             </div>

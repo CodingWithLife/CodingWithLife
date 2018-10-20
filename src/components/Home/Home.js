@@ -1,18 +1,12 @@
 import React from 'react';
-import jungs from './jungs.jpg'
-
-
 
 const Home = () => {
 return (
-  <div className="page">
-    <div className="body">
-      <div id="featured">
+  <div >
+    <div >
+      <div >
          <center><h3>Stranger Friend</h3></center>
-
-
-          <div id="list-8" className="mk-list-styles  mk-align-none   clear" data-charcode="mk-icon-angle-right" data-family="">
-
+          <div>
               <ul>
                 <li>
                 Without Judgement
@@ -39,11 +33,8 @@ return (
                 Understanding the different motives of the Archetypes often answers the ‘why’ behind our purpose in life or our organization’s mission in the world.
                 </li>
               </ul>
-
             </div>
           </div>
-          <img alt={'jungs'} src= {jungs} />
-
         </div>
       </div>
   );

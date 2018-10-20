@@ -34,7 +34,7 @@ class Signin extends React.Component {
           this.props.onRouteChange('home');
         }
       })
-      console.log("no pos not se pudo mr.Pancho");
+      console.log("no pos no se pudo mr.Pancho");
     }
 
   render() {

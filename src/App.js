@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
-import Profiles from './components/Profiles/Profiles.js'
-import Home from './components/Home/Home.js'
-import Chat from './components/Chat/Chat.js'
-import Survey from './components/survey/survey.js'
-import Footer from './components/Footer/Footer.js'
+import Profiles from './components/Profiles/Profiles.js';
+import Home from './components/Home/Home.js';
+import Chat from './components/Chat/Chat.js';
+import Footer from './components/Footer/Footer.js';
+import About from './components/About/About.js'
 import './App.css';
 
 
@@ -49,10 +49,10 @@ class App extends Component {
 
 
   onRouteChange = (route) => {
-    if (route === 'signout' || route === 'Survey') {
+    if (route === 'signout') {
       this.setState({isSignedIn: false})
       //there are two states on the sign out
-    } else if (route === 'home' || route === 'Chat' || route === 'Profiles') {
+    } else if (route === 'home' || route === 'Chat'|| route === 'About') {
       this.setState({isSignedIn: true})
     }
     this.setState({route: route});
@@ -65,37 +65,34 @@ class App extends Component {
 
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         {
-            route === 'Profiles'
+          (route === 'About'
+            ? <div>
+              <About />
+              </div>
+
+            :(route === 'Chat'
+            ? <div>
+              <Chat />
+              </div>
+
+              :(route === 'home'
               ? <div>
-                <Profiles />
-                <Footer />
-                </div>
+                  <Home />
+                  <Profiles />
+                  <Footer />
+                  </div>
 
-                  :(route === 'Chat'
-                    ? <div>
-                      <Chat />
-                      </div>
+                : (route === 'signin'
+                ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
 
-
-                      :(route === 'home'
-                      ? <div>
-                          <Home />
-                          <Footer />
-                        </div>
-
-                        : (route === 'signin'
-                           ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
-
-                           :(route === 'Survey'
-                             ?<Survey />
-                              :(
-                                <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
-                              )
-                          )
-                        )
-                      )
-                    )
-         }
+                  :(
+                    <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+                  )
+                )
+              )
+            )
+          )
+        }
       </div>
     );
   }
