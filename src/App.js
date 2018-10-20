@@ -47,10 +47,6 @@ class App extends Component {
     }})
   }
 
-  onInputChange = (event) => {
-    this.setState({input: event.target.value});
-  }
-
 
   onRouteChange = (route) => {
     if (route === 'signout' || route === 'Survey') {
