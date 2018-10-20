@@ -1,5 +1,4 @@
 import React from 'react';
-import "./Signin.css"
 
 class Signin extends React.Component {
   constructor(props) {
@@ -9,39 +8,45 @@ class Signin extends React.Component {
       signInPassword: ''
     }
   }
+
   onEmailChange = (event) => {
     this.setState({signInEmail: event.target.value})
   }
+
   onPasswordChange = (event) => {
     this.setState({signInPassword: event.target.value})
   }
+
   onSubmitSignIn = () => {
-//    fetch('http://localhost:3000/signin', {
-//      method: 'post',
-//      headers: {'Content-Type': 'application/json'},
-//      body: JSON.stringify({
-//        email: this.state.signInEmail,
-//        password: this.state.signInPassword
-//      })
-// })
-//      .then(response => response.json())
-//      .then(user => {
-//       if (user.id) {
-//          this.props.loadUser(user)
+    console.log(this.state);
+    fetch('http://localhost:1337/signin', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: this.state.signInEmail,
+        password: this.state.signInPassword
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data === "OK mr. Pancho") {
+          // this.props.loadUser(user)
           this.props.onRouteChange('home');
-      //   }
-      // })
-  }
+        }
+      })
+      console.log("no pos not se pudo mr.Pancho");
+    }
+
   render() {
     const { onRouteChange } = this.props;
     return (
-      <break className= "test">
-        <main className="main">
-          <div className="measure">
-            <fieldset id="sign_up" className="Signin-header">
+      <article >
+        <main >
+          <div >
+            <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
               <legend >Sign In</legend>
-              <div className="mt3">
-                <label  htmlFor="email-address">Email</label>
+              <div >
+                <label htmlFor="email-address">Email</label>
                 <input
                   type="email"
                   name="email-address"
@@ -49,7 +54,7 @@ class Signin extends React.Component {
                   onChange={this.onEmailChange}
                 />
               </div>
-              <div className="mv3">
+              <div >
                 <label  htmlFor="password">Password</label>
                 <input
                   type="password"
@@ -58,27 +63,20 @@ class Signin extends React.Component {
                   onChange={this.onPasswordChange}
                 />
               </div>
-            <div>
-              <button
+            </fieldset>
+            <div className="">
+              <input
                 onClick={this.onSubmitSignIn}
-                className="signinButton"
                 type="submit"
                 value="Sign in"
-            >Sign in</button>
+              />
             </div>
-            <div>
-              <button
-                onClick={this.onSubmitSignIn}
-                className="registerButton"
-                type="submit"
-                value="Sign in"
-            >Register</button>
+            <div >
+              <p  onClick={() => onRouteChange('register')} >Register</p>
             </div>
-                        </fieldset>
-
           </div>
         </main>
-      </break>
+      </article>
     );
   }
 }

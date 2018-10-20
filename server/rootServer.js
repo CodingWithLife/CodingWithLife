@@ -1,9 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt-nodejs');
+const cors = require('cors');
 
 const app = express();
 //need to use body parser in order for express to understand the json string its passing -import bodyParser
 app.use(bodyParser.json());
+app.use(cors());
+
 const db = {
     users:[
       {
@@ -32,6 +36,9 @@ app.post('/signin',(req, res) =>{
 
 app.post('/register', (req, res) =>{
   const { email, name, password } = req.body;
+  bcrypt.hash(password, null, null, function(err, hash){
+    console.log(hash)
+  });
   db.users.push({
         id:'4',
         name: name,

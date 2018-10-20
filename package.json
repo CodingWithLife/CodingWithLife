@@ -4,7 +4,11 @@
   "private": true,
   "proxy": "http://localhost:3000/",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "knex": "^0.14.2",
+    "pg": "^7.4.0",
     "clarifai": "^2.5.0",
     "express": "^4.16.2",
     "react": "^16.2.0",
@@ -23,6 +27,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "server": "nodemon server/rootServer.js"
-
   }
 }

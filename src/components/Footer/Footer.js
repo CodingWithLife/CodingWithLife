@@ -4,10 +4,10 @@ import './Footer.css'
 const Footer = () => {
       return (
         <div>
-        <footer class="footer-distributed">
-            <div class="footer-left">
+        <footer className="footer-distributed">
+            <div className="footer-left">
                 <h2>HOLACODE</h2>
-                <p class="footer-links">
+                <p className="footer-links">
                     <a href="Home">Home</a>
                     ·
                     <a href="Survey">Survey</a>
@@ -16,27 +16,27 @@ const Footer = () => {
                     ·
                     <a href="Profiles">Profiles</a>
                 </p>
-                <p class="companyname">Thesis Project &copy; 2018</p>
+                <p className="companyname">Thesis Project &copy; 2018</p>
             </div>
-            <div class="footer-center">
+            <div className="footer-center">
                 <div>
-                    <i class="fa fa-map-marker"></i>
+                    <i className="fa fa-map-marker"></i>
                     <p><span>Toledo 39,Juarez</span> CDMX, Mexico</p>
                 </div>
                 <div>
-                    <i class="fa fa-phone"></i>
+                    <i className="fa fa-phone"></i>
                 </div>
                 <div>
-                    <i class="fa fa-envelope"></i>
+                    <i className="fa fa-envelope"></i>
                     <p><a href="mailto:support@company.com">ohhYeahMr.Pancho</a></p>
                 </div>
             </div>
-            <div class="footer-right">
-                <p class="footer-company-about">
+            <div className="footer-right">
+                <p className="footer-company-about">
                     <span>codingWithLife</span>
                     Proud holaCode Students
                 </p>
-                <div class="footer-icons">
+                <div className="footer-icons">
                     <a href="URL-FACEBOOK" target="_blank"><img alt="siguenos en facebook" height="40" src="http://3.bp.blogspot.com/-MQuocq7OzfU/UiXwUY81yQI/AAAAAAAAB0Q/h6-R_R2-buI/s1600/face.png" title="Follow us on facebook" width="40" /></a>
                   <a href="URL-Likedin" target="_blank"><img alt="Sígueme en Likedin" height="40" src="http://2.bp.blogspot.com/-pAL6ZbCO2js/UiX1Yn-MYdI/AAAAAAAAB7g/o2r-7swzeLc/s1600/linkedin_logo_ok.png" title="Follow us on Likedin" width="40" /></a>
                     <a href="URL-youtube" target="_blank"><img alt="Canal de youtube" height="40" src="http://4.bp.blogspot.com/-NFK4YtYPiXw/UiX1X0rq9pI/AAAAAAAAB7w/l_cIRw8Cij0/s1600/Youtube+alt+2.png" title="Follow us on youtube" width="40" /></a>
