@@ -11,6 +11,7 @@ const Chat = () => {
 
         <section class="chat">
           <p><strong>Pepito</strong>: HELLOOO!</p>
+          
           <p><strong>親日</strong>: こんいちは！</p>
         </section>
 

@@ -7,16 +7,20 @@ const app = express();
 //need to use body parser in order for express to understand the json string its passing -import bodyParser
 app.use(bodyParser.json());
 app.use(cors());
+let counter = 1;
+function counts(counter) {
+    return counter = counter + 1;
+}
 
 const db = {
     users:[
       {
-        id:'3',
+        id:'0',
         name: 'pancho',
         email: 'pancho@gmail.com',
         password: 'rancho',
-        entries: 0,
-        joined: new Date()
+        joined: new Date(),
+        entries: 0
       }
     ]
 }
@@ -35,17 +39,18 @@ app.post('/signin',(req, res) =>{
 })
 
 app.post('/register', (req, res) =>{
-  const { email, name, password } = req.body;
+  const { email, name, password, entries } = req.body;
   bcrypt.hash(password, null, null, function(err, hash){
     console.log(hash)
   });
   db.users.push({
-        id:'4',
+        id: counts(counter),
         name: name,
         email: email,
         password: password,
-        entries: 0,
-        joined: new Date()
+        joined: new Date(),
+        entries: entries
+
   })
   res.json(db.users[db.users.length-1]);
 })

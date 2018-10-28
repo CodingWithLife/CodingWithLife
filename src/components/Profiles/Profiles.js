@@ -1,5 +1,4 @@
 import React from 'react';
-import './Profiles.css'
 import Card from './Card/Card.js'
 
 import outlaw from "./Card/outlaw.png"

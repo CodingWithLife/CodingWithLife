@@ -1,6 +1,4 @@
 import React from 'react';
-import Survey from '../survey/survey.js'
-
 
 class Register extends React.Component {
   constructor(props) {
@@ -8,12 +6,9 @@ class Register extends React.Component {
     this.state = {
       email: '',
       password: '',
-      name: ''
+      name: '',
+      entries: []
     }
-  }
-
-  onNameChange = (event) => {
-    this.setState({name: event.target.value})
   }
 
   onEmailChange = (event) => {
@@ -24,6 +19,14 @@ class Register extends React.Component {
     this.setState({password: event.target.value})
   }
 
+  onNameChange = (event) => {
+    this.setState({name: event.target.value})
+  }
+
+  onEntriesChange = (event) => {
+    this.setState({entries: event.target.value})
+  }
+
   onSubmitSignIn = () => {
     fetch('http://localhost:1337/register', {
       method: 'post',
@@ -31,7 +34,8 @@ class Register extends React.Component {
       body: JSON.stringify({
         email: this.state.email,
         password: this.state.password,
-        name: this.state.name
+        name: this.state.name,
+        q1: this.state.q1
       })
     })
       .then(response => response.json())
@@ -76,6 +80,27 @@ class Register extends React.Component {
                   onChange={this.onPasswordChange}
                 />
               </div>
+<div >
+<p>Select Scale from 1 to 10</p>
+                  <p>I am the life of the party</p>
+                  <form action="/action_page.php">
+                  <select
+                    onChange={this.onEntriesChange}
+                    value={this.state.whenMesuare}
+                    type="select"
+                    name="q1"
+                    id="q1"
+                    >
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+
+                  </select>
+                </form>
+
+</div>
             </fieldset>
             <div className="">
               <input
@@ -85,7 +110,7 @@ class Register extends React.Component {
               />
             </div>
           </div>
-                  <Survey />
+
         </main>
       </article>
     );
